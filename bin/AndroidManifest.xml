@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pack.tunisiatouristicguide"
+    android:versionCode="1"
+    android:versionName="1.0" >
+ 
+    
+    <permission
+        android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" />
+   
+
+    
+    
+    
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+
+     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    
+	<!-- rear facing cam -->
+	<uses-feature android:name="android.hardware.camera" android:required="true" />
+
+	<!-- users location -->
+	<uses-feature android:name="android.hardware.location" android:required="true" />
+
+	<!-- accelerometer -->
+	<uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+
+	<!-- compass -->
+	<uses-feature android:name="android.hardware.sensor.compass" android:required="true" />
+    
+	
+	
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+       
+        
+        
+        <!-- end notes -->
+        <activity
+            android:name="pack.tunisiatouristicguide.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- pour les 4 boutons à l'accueil -->
+         <activity
+            android:name="pack.tunisiatouristicguide.Activity_About"
+            android:label="@string/app_name" />
+         
+        <activity
+            android:name="pack.tunisiatouristicguide.Activity_Help"
+            android:label="@string/app_name" />
+         
+        
+        <activity
+            android:name="pack.tunisiatouristicguide.Activity_Lost"
+            android:label="@string/app_name" />
+        
+        
+        <!-- overview / listactivities -->
+        <activity
+            android:name="pack.tunisiatouristicguide.ActivityViewerPage"
+            android:label="@string/app_name" />
+        
+         <activity
+            android:name="pack.testv2.MainActivity"
+            android:label="@string/app_name" />
+         
+        <activity
+            android:name="pack.tunisiatouristicguide.Activity_Navigation"
+            android:label="@string/app_name" />
+        
+        <activity
+            android:name="pack.tunisiatouristicguide.SampleTabsWithIcons"
+            android:label="@string/app_name" />
+        
+        <!-- ajout yessine pour l'intégration de WIKITUDE SDK EXAMPLE dans Tunisia Touristic Guide -->
+        <activity android:name="pack.wikitude.HotelsListActivity" android:label="@string/app_name" />
+        <activity android:name="pack.wikitude.RestaurentsListActivity" android:label="@string/app_name" />
+        <activity android:name="pack.wikitude.MeuseumlistActivity" android:label="@string/app_name" />
+        <activity android:name="pack.wikitude.SimpleARBrowserActivity" android:label="@string/app_name" />
+        
+        <activity android:name="pack.wikitude.MainActivity2" android:label="@string/app_name" />
+        <activity android:name="pack.wikitude.activityFORWebServerAndJSonANDLiniting" android:label="@string/app_name" />
+        <activity android:name="pack.tunisiatouristicguide.ActivityMap" android:label="@string/app_name" />
+        
+       
+        <activity android:name="pack.wikitude.SamplePoiDetailActivity" android:label="@string/app_name" />
+       
+        <!-- Events activities -->
+        <activity android:name="pack.events.ItemDetailActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="pack.events.ItemListActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+		      
+        <!-- cam activities -->
+        <activity android:name="pack.wikitude.BasicArchitectActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="pack.wikitude.SamplePoidataFromNativeActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="pack.wikitude.SamplePoidataFromNativeAndUrlListenerActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="pack.wikitude.SamplePoidataFromNativeAndUrlListenerRefreshActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name="pack.wikitude.ActivityChargeAllPOI" android:configChanges="orientation|keyboardHidden|screenSize"/>
+        
+        
+        
+        
+        
+        
+        
+         <activity
+            android:name="pack.tunisiatouristicguide.ActivityViewCamera"
+            android:label="@string/app_name" />
+        
+         
+          <activity
+            android:name="pack.tunisiatouristicguide.ActivityViewLocation"
+            android:label="@string/app_name" />
+
+          
+         
+          
+           <!-- Goolge API Key -->
+         <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB-ShNc2ejUKpyRX8i7RmNu3FQqh4VbifI"/>
+          </application>
+          
+    
+
+</manifest>
